@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "BTC-USD",
+    "value": "111672.46"
+  },
+  {
+    "symbol": "ETH-USD",
+    "value": "4306.04"
+  },
+  {
+    "symbol": "ADA-USD",
+    "value": "0.86"
+  },
+  {
+    "symbol": "SOL-USD",
+    "value": "214.22"
+  },
+  {
+    "symbol": "DOT-USD",
+    "value": "4.04"
+  },
+  {
+    "symbol": "AVAX-USD",
+    "value": "25.08"
+  },
+  {
+    "symbol": "MATIC-USD",
+    "value": "0.2709"
+  },
+  {
+    "symbol": "LINK-USD",
+    "value": "23.14"
+  },
+  {
+    "symbol": "UNI-USD",
+    "value": "9.49"
+  }
+]
