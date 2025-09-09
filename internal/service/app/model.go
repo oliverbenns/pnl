@@ -13,7 +13,8 @@ type Trade struct {
 type Position struct {
 	Symbol        string
 	Quantity      string
-	AvgCostBasis  string
+	CostBasis     string
+	AvgPrice      string
 	CurrentPrice  string
 	MarketValue   string
 	UnrealizedPnL string

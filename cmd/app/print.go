@@ -18,7 +18,7 @@ func printPositions(positions []app.Position) {
 
 	table := tablewriter.NewWriter(os.Stdout)
 
-	table.Header([]string{"Symbol", "Quantity", "Avg Cost Basis", "Current Price", "Market Value", "Unrealized PNL", "Realized PNL", "Total PNL"})
+	table.Header([]string{"Symbol", "Quantity", "Cost Basis", "Avg Price", "Current Price", "Market Value", "Unrealized PNL", "Realized PNL", "Total PNL"})
 
 	for _, position := range positionsCopy {
 		row := positionToTableRow(position)
@@ -32,7 +32,8 @@ func positionToTableRow(position app.Position) []string {
 	columns := []string{
 		position.Symbol,
 		position.Quantity,
-		position.AvgCostBasis,
+		position.CostBasis,
+		position.AvgPrice,
 		position.CurrentPrice,
 		position.MarketValue,
 		position.UnrealizedPnL,
