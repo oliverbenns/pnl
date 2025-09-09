@@ -5,6 +5,7 @@ import (
 
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestCalculatePosition(t *testing.T) {
@@ -13,10 +14,10 @@ func TestCalculatePosition(t *testing.T) {
 			{Symbol: "BTC-USD", Quantity: "2", Price: "100", Side: "buy"},
 		}
 		price := decimal.NewFromInt(101)
+
 		position, err := calculatePosition(trades, price)
-		if err != nil {
-			t.Fatalf("Failed to calculate position: %v", err)
-		}
+		require.NoError(t, err)
+
 		assert.Equal(t, "BTC-USD", position.Symbol)
 		assert.Equal(t, "2", position.Quantity)
 		assert.Equal(t, "200", position.CostBasis)
@@ -30,10 +31,10 @@ func TestCalculatePosition(t *testing.T) {
 			{Symbol: "BTC-USD", Quantity: "2", Price: "100", Side: "sell"},
 		}
 		price := decimal.NewFromInt(101)
+
 		position, err := calculatePosition(trades, price)
-		if err != nil {
-			t.Fatalf("Failed to calculate position: %v", err)
-		}
+		require.NoError(t, err)
+
 		assert.Equal(t, "BTC-USD", position.Symbol)
 		assert.Equal(t, "-2", position.Quantity)
 		assert.Equal(t, "-200", position.CostBasis)
