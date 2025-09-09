@@ -4,9 +4,10 @@ import "time"
 
 type Trade struct {
 	Symbol   string
-	Quantity float64
-	Price    float64
+	Quantity string
+	Price    string
 	Date     time.Time
+	Side     string
 }
 
 type Position struct {

@@ -11,9 +11,10 @@ import (
 type Trade struct {
 	Symbol       string    `json:"symbol"`
 	SecurityType string    `json:"security_type"`
-	Quantity     float64   `json:"quantity"`
-	Price        float64   `json:"price"`
+	Quantity     string    `json:"quantity"`
+	Price        string    `json:"price"`
 	Date         time.Time `json:"date"`
+	Side         string    `json:"side"`
 }
 
 func (t *Trade) toAppTrade() app.Trade {
@@ -22,6 +23,7 @@ func (t *Trade) toAppTrade() app.Trade {
 		Quantity: t.Quantity,
 		Price:    t.Price,
 		Date:     t.Date,
+		Side:     t.Side,
 	}
 }
 

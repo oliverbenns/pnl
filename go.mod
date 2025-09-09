@@ -2,7 +2,10 @@ module github.com/oliverbenns/pnl
 
 go 1.25.0
 
-require github.com/olekukonko/tablewriter v1.0.9
+require (
+	github.com/olekukonko/tablewriter v1.0.9
+	github.com/shopspring/decimal v1.4.0
+)
 
 require (
 	github.com/fatih/color v1.15.0 // indirect
